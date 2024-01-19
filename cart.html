@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="cart.css">
+    <title>cart</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="PRODUCTS.HTML">Menu</a></li>
+            <a href="index.html" id="logo"><img src="mercilogo-trans.png"></a>
+            <li><a href="About.html">About</a></li>
+            <li>
+                <a href="cart.html" class="cart">Cart</a>
+            </li>
+        </ul>
+        <button id="mobile-nav-button" onclick="mobilenav(1)"><iconify-icon icon="ep:menu"></iconify-icon></button>
+    </header>
+    <div onclick="mobilenav(2)" class="mobile-nav" id="mobile-nav">
+        <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="PRODUCTS.HTML"><li>Menu</li></a>
+            <a href="About.html"><li>About</li></a>
+            <a href="#"><li>Cart</li></a>
+        </ul>
+    </div>
+    <main>
+        <div class="Products">
+            <div class="prodetails">
+               <h2>Shopping Cart</h2>
+            </div>
+            <ul id="cartaddedproducts"></ul>
+        </div>
+        <div class="payment">
+            <div class="recipt">
+                <div><h1>Name</h1><input type="text" placeholder="Name*" id="name"></div>
+                <div><h1>Address</h1><input type="text" placeholder="Address*" id="Adress"></div>
+                <div><h1>Email/Phone</h1><input type="text" placeholder="Email or Phone" id="emailphone"></div>
+            </div>
+            <div class="ordertype">
+                <button id="paymenttype1" onclick="paymenttype(1)" style="background-image: linear-gradient( darkorange,rgb(247, 169, 24)); color: #1f1f1f;"><iconify-icon icon="mdi:cash-on-delivery"></iconify-icon></button>
+                <button id="paymenttype2" onclick="paymenttype(2)" style="background-image:linear-gradient(#0000FF,#0079C1) ; color: white;"><iconify-icon icon="arcticons:gcash"></iconify-icon></button>
+                <button id="paymenttype3" onclick="paymenttype(3)" style="background-color: #0079C1; color: gainsboro;"><iconify-icon icon="ri:visa-line"></iconify-icon></button>
+            </div>
+            <div class="confirmation">
+                <div class="total"><h1>Total</h1><h2>₱ <span id="orderno">0</span></h2></div>
+                <hr>
+                <button onclick="confirmorder()">confirm</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footerwrapper">
+            <img src="logo.png" alt="">
+        <div class="details">
+            <div>
+                <h1>LOCATION</h1>
+               <p> CM & Sons Food Products, Inc., MERZCI Factory Hervias Village 2, Brgy. Villamonte, Bacolod City, Philippines 6100</p>
+            </div>
+            <div>
+                <h1>OPERATION</h1>
+               <p> 8am - 12nn & 1pm - 5:30 pm (Weekdays)
+                8am - 12nn (Saturdays)</p>
+            </div>
+            <div>
+                <h1>PHONE</h1>
+               <p> Trunkline: (6334) 435 4444 / 707 4444
+                Telefax: (6334) 435 4444; local 144</p>
+            </div>
+            <div>
+                <h1>EMAIL</h1>
+               <p> example@social-activity.com</p>
+            </div>
+        </div>
+        <div class="footerothers">
+            <hr>
+            <h1>
+                Merzci © 2007-2016 - All Rights ReservedㅤV 1.0</h1>
+            <div class="socials">
+                <a href="#"><iconify-icon icon="bi:facebook"></iconify-icon></a>
+                <a href="#"><iconify-icon icon="ic:round-email"></iconify-icon></a>
+                <a href="#"><iconify-icon icon="grommet-icons:twitter"></iconify-icon></a>
+                <a href="#"><iconify-icon icon="mingcute:youtube-fill"></iconify-icon></a>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>
