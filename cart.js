@@ -145,6 +145,9 @@ function paymenttype(num) {
       break;
   }
 }
+function closee() {
+  document.getElementById('thankyouforyourorder').style.visibility = "hidden";
+}
 function confirmorder() {
   let alrt = 0;
   let name = document.getElementById('name');
@@ -184,7 +187,8 @@ function confirmorder() {
     alrt++;
   }
   if (alrt == 3) {
-    alert("Order Confirmed");
+    document.getElementById('clientname').innerHTML = name.value;
+    document.getElementById('thankyouforyourorder').style.visibility = "visible";
   } else { alert("Make sure to fill the (Name,   Address,   Email/Phone)");}
     
 }
