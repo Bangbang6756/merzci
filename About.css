@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lemon&family=Mochiy+Pop+P+One&family=Poppins:wght@600&family=Titan+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moirai+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Concert+One&display=swap');
 :root {
     --base-text-color:  #dbdbdb;
     --base-bg-color: #1f1f1f;
@@ -26,6 +22,7 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
 /*----------------------header----------------------*/
 header {
     z-index: 10;
@@ -92,12 +89,14 @@ header li:nth-child(5) {
 header a {
     color: whitesmoke;
     z-index: 2;
-    width: 30%; height: 100%;
+    width: 100%; height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+
 }
-#logo {background-color: var(--color-yellow); align-items:normal;}
+#logo {width: 30%; background-color: var(--color-yellow); align-items:normal;}
 header img {
     scale: 0.7;
     mix-blend-mode: color-burn;
@@ -125,6 +124,7 @@ header button {
     justify-content: space-evenly;
     flex-direction: column;
 }
+.mobile-nav a,
 .mobile-nav li {
     background-color: var(--color-yellow);
     width: 95%; height: 20%;
@@ -134,49 +134,61 @@ header button {
     justify-content: center;
     font-size: 6vw;
     scale: 0.9;
-}
-.cart {
-    width: 100%; height: 100%;
-    max-height: 100%;
-    color: whitesmoke;
-    position: absolute;
-}
-.cart h1 {
-    border-radius: 3vw;
-    position: absolute;
-    top: -30%; right: -10%;
-    width: 20%;
-    padding: 5%; 
-    aspect-ratio: 1/1;
-    outline: solid 3px black;
-    background-color: var(--color-red);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.1vw;
-    transition: ease-in-out 0.3s;
-    scale: 0;
-}
-.cart:hover {
-    transition: ease-in-out 0.2s;
-    scale: 1.1;
+    color: var(--color-red);
 }
 /*--------------------------MAIN------------------------*/
 main {
     background-color: gainsboro;
     position: relative;
-    height: 370vh;
+    height: 250vh;
     width: 103vw;
     overflow-y: scroll;
 }
+.title {
+    position: absolute;
+    top: 30vh; left: 10%;
+    color: #1f1f1f;
+    font-family: Concert One;
+    font-size: 10vw;
 
+    
+}
+main img {
+    position: absolute;
+    right: 10%; top: 22vh;
+    width: 45%;
+    border-radius: 1vw;
+}
+.ee {
+    position: absolute;
+    outline: 0; border: 0;
+    top: 100vh; left: 5%;
+    background-color: rgb(177, 177, 177);
+    height: 0.3vw; width: 90%;
+}
+.content {
+    position: absolute;
+    top: 110vh; left: 5% ; 
+    width: 90%;
+}
+.content h2 {
+    font-size: 3vw;
+    padding: 3%;
+    padding-left: 0;
+}
+.content h3 {
+    padding-bottom: 1%;
+    font-size: 1.5vw;
+}
+.content p {
+    font-size: 1vw;
+    padding-bottom: 5%;
+}
 /*------------------------footer------------------------*/
 footer {
     left: 1%;
     position: absolute;
     width: 98vw;
-    background-color: red;
 }
 .footerwrapper {
     position: absolute;
@@ -269,7 +281,34 @@ footer img {
     color: gray;
 }
 @media (max-width: 700px) {
-    body {overflow: hidden; width: 100vw;}
+    body {
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 210vh; width: 100%;}
+    main {
+        background-color: gainsboro;
+        height: 100%; width: 100vw;
+    }
+    .footerwrapper {
+        height: 40vh;
+    }
+    .footerwrapper img {
+        scale: 2; left: 45%;
+        top: 15%;
+    }
+    .details {
+        top: 40%; left: 10%;
+        width: 80%;
+    }
+    .details h1 {
+        font-size: 2vw;
+    }
+    .details p {
+        font-size: 1vw;
+        font-weight: bold;
+    }
+    footer h1 {font-size: 1.1vw;}
     header{
         position: absolute;
         top: 0;
@@ -295,7 +334,7 @@ footer img {
         background-color: var(--color-yellow);
     }
     header img {
-        scale: 0.1;
+        scale: 0.5;
     }
     header button {
         display: flex;
@@ -313,22 +352,19 @@ footer img {
     header iconify-icon {
         font-size: 5vw;
     }
-    .slider {
-        top: 40vw;
-        height: 60vw;
+    #logo {
+        width: 40%;
     }
-    .sliderWrapper h1 {
-        -webkit-text-stroke: 0.1vw white;
-        font-size: 10vw;
+    .title {
+        font-size: 15vw;
     }
-    .title1 h2 {font-size: 5vw; top: 36%;}
-    .title2 h1 {top: 5%;}
-    .title1 p {
-        bottom: 23%;
-        font-size: 3.2vw; width: 50%;
+    main img {right: 10%; top: 55vh; width: 80%;}
+    .ee {
+        top: 95vh;
+        height: 1vw;
     }
-    .title2 p {
-        bottom: 10%;
-        font-size: 3vw; width: 50%;
-    }
+    .content {top: 100vh;}
+    .content h2 {font-size: 3vh; padding-bottom: 15%;}
+    .content h3 {font-size: 4vw; padding-bottom: 5%;}
+    .content p {font-size: 3vw;}
 }
