@@ -146,6 +146,7 @@ function paymenttype(num) {
   }
 }
 function confirmorder() {
+  let alrt = 0;
   let name = document.getElementById('name');
   let adress = document.getElementById("Adress");
   let emailPhone = document.getElementById('emailphone');
@@ -153,29 +154,39 @@ function confirmorder() {
     console.log('no value');
     name.placeholder = "Name Required";
     name.style.outline = ' solid 5px red';
+    alrt++;
   }
   else {
     console.log('has a value');
     name.style.outline = ' 0';
+    alrt--;
   }
   if (adress.value === "") {
     console.log('no value');
     adress.placeholder = "Name Required";
     adress.style.outline = ' solid 5px red';
+    alrt++;
   }
   else {
     console.log('has a value');
     adress.style.outline = ' 0';
+    alrt--;
   }
   if (emailPhone.value === "") {
     console.log('no value');
     emailPhone.placeholder = "Name Required";
     emailPhone.style.outline = ' solid 5px red';
+    alrt++;
   }
   else {
     console.log('has a value');
     emailPhone.style.outline = ' 0';
+    alrt--;
   }
+  if (alrt == 3) {
+   
+  } else { alert("Order Confirmed");}
+    
 }
 
 function mobilenav(condition) {
