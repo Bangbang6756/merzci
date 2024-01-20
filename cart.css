@@ -374,6 +374,25 @@ main {
     font-family:  Poppins;
     font-size: 1.5vw;
 }
+.thankyouforyourorder {
+    position: fixed;
+    z-index: 100;
+    height: 100%; width: 100%;
+    background-color: rgba(43, 43, 43, 0.558);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thankyouforyourorder h1 {
+    color: gainsboro;
+    padding: 2%;
+    font-size: 3vw;
+}
+.thankyouforyourorder h2 {
+    font-size: 3vw;
+    color: gainsboro;
+}
 /*------------------------footer------------------------*/
 footer {
     left: 1%;
@@ -626,4 +645,5 @@ footer img {
         font-size: 7vw;
         margin-top: 5%;
     }
+    .thankyouforyourorder h1,.thankyouforyourorder h2 {font-size: 5vw;}
 }
