@@ -187,6 +187,7 @@ function confirmorder() {
     alrt++;
   }
   if (alrt == 3) {
+    alert(`Thank you for ordering ${name.value}`);
     document.getElementById('clientname').innerHTML = name.value;
     document.getElementById('thankyouforyourorder').style.visibility = "visible";
   } else { alert("Make sure to fill the (Name,   Address,   Email/Phone)");}
