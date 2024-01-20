@@ -159,33 +159,33 @@ function confirmorder() {
   else {
     console.log('has a value');
     name.style.outline = ' 0';
-    alrt--;
+    alrt++;
   }
   if (adress.value === "") {
     console.log('no value');
     adress.placeholder = "Name Required";
     adress.style.outline = ' solid 5px red';
-    alrt++;
+    alrt--;
   }
   else {
     console.log('has a value');
     adress.style.outline = ' 0';
-    alrt--;
+    alrt++;
   }
   if (emailPhone.value === "") {
     console.log('no value');
     emailPhone.placeholder = "Name Required";
     emailPhone.style.outline = ' solid 5px red';
-    alrt++;
+    alrt--;
   }
   else {
     console.log('has a value');
     emailPhone.style.outline = ' 0';
-    alrt--;
+    alrt++;
   }
   if (alrt == 3) {
-   
-  } else { alert("Order Confirmed");}
+    alert("Order Confirmed");
+  } else { alert("Make sure to fill the (Name,   Address,   Email/Phone)");}
     
 }
 
